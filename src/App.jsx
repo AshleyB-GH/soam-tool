@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import LOGO from "./Weston_Logo.png";
 
 const STEPS = [
   { id: 1, label: "Occurrence" },
@@ -346,6 +347,12 @@ export default function App() {
         <button style={styles.btnSecondary} onClick={() => setStep(4)}>← Back</button>
         <button style={styles.btnPrimary} onClick={() => window.print()}>Print / Export PDF</button>
       </div>
+      <div style={{marginTop:20,padding:"12px 16px",background:"#0a0f1e",border:"1px solid #1e293b",borderRadius:8,borderLeft:"3px solid #334155"}}>
+        <div style={{fontSize:9,color:"#475569",textTransform:"uppercase",letterSpacing:1.5,marginBottom:4}}>Source Reference</div>
+        <div style={{fontSize:11,color:"#64748b",lineHeight:1.6}}>Data source: Quick Reference Guide V2</div>
+        <div style={{fontSize:11,color:"#64748b",lineHeight:1.6}}>SOAM QRG Systemic Occurrence Analysis Methodology</div>
+        <div style={{fontSize:11,color:"#64748b",lineHeight:1.6}}>EUROCONTROL</div>
+      </div>
     </div>
   );
 
@@ -353,7 +360,7 @@ export default function App() {
     <div style={styles.app}>
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap'); * { box-sizing: border-box; } input:focus, textarea:focus, select:focus { border-color: #38bdf8 !important; }`}</style>
       <div style={styles.header}>
-        <div style={styles.logo}>✈</div>
+        <img src={LOGO} alt="Weston Airport" style={{height:48,width:"auto",borderRadius:6}} />
         <div>
           <div style={{fontSize:18,fontWeight:700,letterSpacing:2,color:"#f1f5f9",textTransform:"uppercase"}}>SOAM Investigation Tool</div>
           <div style={{fontSize:10,color:"#64748b",letterSpacing:3,textTransform:"uppercase"}}>Weston Airport · Safety Analysis</div>
