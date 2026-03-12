@@ -1,0 +1,35 @@
+{
+  "name": "soam-investigation-tool",
+  "version": "1.0.0",
+  "description": "SOAM Aviation Safety Investigation Tool - Weston Airport",
+  "main": "electron.cjs",
+  "scripts": {
+    "dev": "vite --port 5173",
+    "build": "vite build",
+    "preview": "vite preview",
+    "electron": "wait-on http://localhost:5173 && electron .",
+    "electron-dev": "concurrently \"npm run dev\" \"npm run electron\""
+  },
+  "build": {
+    "appId": "ie.westonairport.soam",
+    "productName": "SOAM Investigation Tool",
+    "directories": { "output": "dist-electron" },
+    "files": ["dist/**/*", "electron.cjs"],
+    "win": { "target": "nsis", "icon": "public/vite.svg" },
+    "mac": { "target": "dmg", "icon": "public/vite.svg" },
+    "linux": { "target": "AppImage" }
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "recharts": "^2.15.3"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.4.1",
+    "concurrently": "^9.1.2",
+    "electron": "^35.0.0",
+    "electron-builder": "^25.1.8",
+    "vite": "^7.3.1",
+    "wait-on": "^8.0.3"
+  }
+}
