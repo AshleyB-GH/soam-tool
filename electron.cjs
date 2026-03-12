@@ -6,10 +6,9 @@ function createWindow() {
     width: 1280,
     height: 800,
     webPreferences: { nodeIntegration: false },
-    title: "SOAM Investigation Tool",
-    icon: path.join(__dirname, "public/vite.svg")
+    title: "SOAM Investigation Tool"
   })
-  win.loadURL("http://localhost:5173")
+  win.loadFile(path.join(__dirname, "dist/index.html"))
 }
 
 app.whenReady().then(createWindow)
