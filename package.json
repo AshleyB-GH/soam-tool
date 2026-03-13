@@ -13,11 +13,24 @@
   "build": {
     "appId": "ie.westonairport.soam",
     "productName": "SOAM Investigation Tool",
-    "directories": { "output": "dist-electron" },
-    "files": ["dist/**/*", "electron.cjs"],
-    "win": { "target": "nsis", "icon": "public/vite.svg" },
-    "mac": { "target": "dmg", "icon": "public/vite.svg" },
-    "linux": { "target": "AppImage" }
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "dist/**/*",
+      "electron.cjs"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "public/vite.svg"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "public/vite.svg"
+    },
+    "linux": {
+      "target": "AppImage"
+    }
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -25,7 +38,7 @@
     "recharts": "^2.15.3"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.4.1",
+    "@vitejs/plugin-react": "^4.7.0",
     "concurrently": "^9.1.2",
     "electron": "^35.0.0",
     "electron-builder": "^25.1.8",
